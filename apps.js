@@ -6,6 +6,7 @@ var time = 60;
 var i = 0;
 var backcard = "assets/cardback.jpg"
 var imgArray = ["assets/cat1.jpeg", "assets/cat2.jpg", "assets/dog1.jpg", "assets/dog2.jpg", "assets/cat1.jpeg", "assets/cat2.jpg", "assets/dog1.jpg", "assets/dog2.jpg"];
+var endGame = document.getElementsByClassName("gameOver")[0];
 
 var cardArray = [];
 // cardArray[0]=document.getElementById("c1");
@@ -109,7 +110,6 @@ function match(){
 
 // }
 function reset(){
-	
 	score = 0;
 	document.getElementById("score").innerHTML = score;
 	time = 60;
@@ -117,8 +117,16 @@ function reset(){
 	clicks = 0;
 	for (i; i<imgArray.length;i++){
 	document.images[i].src = backcard;
-	console.log(i);
+	console.log(document.images[i].src, i);
+	}
 	shuffle(imgArray);
 	console.log(imgArray);
+}
+
+function gameOver(){
+	document.getElementById("scoreUpdate").innerHTML = score;
+	document.getElementById
+	if(score === 4){
+		endGame.querySelector('')
 	}
 }

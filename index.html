@@ -13,6 +13,7 @@
 		<div id = "scoreBar">
 			<div id="scoreHolder">
 				<h2>Score: 
+				<p id = "score"></p>
 				</h2>	
 			</div>
 				
@@ -21,6 +22,7 @@
 					<p id="timer"></p>
 				</h2>
 			</div>
+
 		</div>
 		<div id = "cardInterface">
 
@@ -54,6 +56,13 @@
 		<div id = "buttonInterface">
 			<button id = "restartBtn" onclick="reset()">Restart</button>
 		</div>
+
+		<section class = "gameOver">
+			<h1>Your Score: </h1><div id = "scoreUpdate"></div>
+			<div id = "status">You Win!</div>
+			<button>play again</button>
+		</section>
+
 	</div>	
 	<script src = "apps.js"></script>
 </body>

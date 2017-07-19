@@ -8,11 +8,20 @@ body {
 	width: 750px;
 	height: auto;
 	margin:0 auto;
+}
 
+#title{
+	background-color: lavender;
+	height: auto;
+	width: auto;
 }
 
 #scoreBar {
-	display:none;
+	display:flex;
+}
+
+#scoreTimer {
+	display: flex;
 }
 
 #scoreHolder {
@@ -87,9 +96,3 @@ img{
 	width: auto;
 	display: flex;
 	justify-content: center;
-<<<<<<< HEAD
-}
-=======
-
-
->>>>>>> 54bd44341205bb9a0e016ed7f77546946cea54aa
