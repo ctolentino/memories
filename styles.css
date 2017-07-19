@@ -12,7 +12,7 @@ body {
 }
 
 #scoreBar {
-	display:flex;
+	display:none;
 }
 
 #scoreHolder {
@@ -44,13 +44,27 @@ img{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	/*background-image: url(/assets/cardback.jpg);*/
+	backface-visibility: hidden;
 	height: 200px;
 	width: 150px;
 	border-style: solid;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	transform-style: preserve-3d;
 	transition: transform 1s;
+}
+
+.cards .front {
+  background: url('../assets/cardback.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cards .back {
+  background: url('#');
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
 }
 
 .cards.flipped{
@@ -73,5 +87,4 @@ img{
 	width: auto;
 	display: flex;
 	justify-content: center;
-
->>>>>>> f4913dc73ea16ee9d04a5bc733872d65eecce841
+}
