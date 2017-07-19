@@ -18,7 +18,20 @@ var cardArray = [];
 // cardArray[7]=document.getElementById("c8");
 
 //var cardArray[] = document.getElementById();
-
+function shuffle(imgArray){
+	var currentIndex = imgArray.length, tempVal, ranInd;
+	while(0 !== currentIndex){
+		ranInd = Math.floor(Math.random()*currentIndex);
+		currentIndex--;
+		tempVal = imgArray[currentIndex];
+		imgArray[currentIndex] = imgArray[ranInd];
+		imgArray[ranInd] = tempVal;
+	}
+	return imgArray;
+}
+console.log(imgArray);
+imgArray = shuffle(imgArray);
+console.log(imgArray);
 
 function on(card){
 	
@@ -67,19 +80,18 @@ function choose(card){
 	    document.images[card].src = imgArray[card];
 	    clicks=1;
 	    }else if (clicks ===1){
-    	console.log(clicks);
         clicks++;
         second = card;
         document.images[card].src = imgArray[card];
-        match();
+        timeR = setInterval("match()", 1000);
         }
     }
 function match(){
-	
+	clearInterval(timeR);
+	clicks = 0;
 	if (imgArray[second] == imgArray[first]) {
             score++;
             document.getElementById("score").innerHTML = score;
-            clicks = 0;
         } else {
         	document.images[first].src = backcard;
             document.images[second].src = backcard;
@@ -97,6 +109,7 @@ function match(){
 
 // }
 function reset(){
+	
 	score = 0;
 	document.getElementById("score").innerHTML = score;
 	time = 60;
@@ -105,5 +118,7 @@ function reset(){
 	for (i; i<imgArray.length;i++){
 	document.images[i].src = backcard;
 	console.log(i);
+	shuffle(imgArray);
+	console.log(imgArray);
 	}
 }
