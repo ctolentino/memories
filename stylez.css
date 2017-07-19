@@ -12,7 +12,7 @@ body {
 }
 
 #scoreBar {
-	display:none;
+	display:flex;
 }
 
 #scoreHolder {
@@ -44,18 +44,21 @@ img{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	backface-visibility: hidden;
+	/*background-image: url(/assets/cardback.jpg);*/
 	height: 200px;
 	width: 150px;
 	border-style: solid;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	transform-style: preserve-3d;
 	transition: transform 1s;
 }
 
+.cards.flipped{
+	transform: rotate(180deg);
+}
+
 .cards .front {
-  background: url('../assets/cardback.jpg');
+  background: url('../images/cardback.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -65,10 +68,6 @@ img{
   background-size: cover;
   background-position: center;
   transform: rotateY(180deg);
-}
-
-.cards.flipped{
-	transform: rotate(180deg);
 }
 
 #restartBtn {
@@ -87,9 +86,5 @@ img{
 	width: auto;
 	display: flex;
 	justify-content: center;
-<<<<<<< HEAD
-}
-=======
 
 
->>>>>>> 54bd44341205bb9a0e016ed7f77546946cea54aa

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<title>Match Maker</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div id= "main">
+		<title>Match Maker</title>
+		<h1>Match Maker</h1>	
+		<div id = "scoreBar">
+			<div id="scoreHolder">
+				<h2>Score: 
+					<p id="score">		
+					</p>
+				</h2>	
+			</div>
+				
+			<div id = "timerHolder">
+				<h2>Timer: 	
+					<p id="timer"></p>
+				</h2>
+			</div>
+		</div>
+		<div id = "cardInterface">
+			<div class="cards" id="c1" onclick="flip(0)">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c2">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c3">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c4">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c5">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c6">
+				<img src="/assets/cardback.jpg" alt="">		
+			</div>
+			<div class="cards" id="c7">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+			<div class="cards" id="c8">
+				<img src="/assets/cardback.jpg" alt="">
+			</div>
+		</div>  
+		<div id = "buttonInterface">
+			<button id = "restartBtn" onclick="on()">Restart</button>
+		</div>
+	</div>	
+	<script src = "apps.js"></script>
+</body>
+
+</html>
